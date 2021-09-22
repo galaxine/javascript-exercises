@@ -1,5 +1,4 @@
-const removeFromArray = function(array, option1 = undefined, option2 = undefined) {
-    const optionsArray = [option1, option2];
+const removeFromArray = function(array, ...optionsArray) {
     optionsArray.forEach(
         option => {
             if (array.includes(option)) {
@@ -10,6 +9,9 @@ const removeFromArray = function(array, option1 = undefined, option2 = undefined
     return array;
 };
 
-console.log(removeFromArray([1, 2, 3, 4], 3, 2));
+function argumentsGiven() {
+    return arguments;
+}
+console.log(removeFromArray([1, 2, 3, 4], 3, 4));
 // Do not edit below this line
 module.exports = removeFromArray;
